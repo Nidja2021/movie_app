@@ -42,14 +42,12 @@
         }
 
         &__casts {
-            @include flex($direction: column);
-            gap: 25px 0;
             width: 100%;
             height: auto;
 
             &__text {
                 @include text;
-                align-self: flex-start;
+                margin-bottom: 20px;
             }
 
             &__cast {

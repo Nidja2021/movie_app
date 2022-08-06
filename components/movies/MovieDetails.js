@@ -15,8 +15,6 @@ export default function MovieDetails({movie, credits}) {
             <Image 
                 src={backdrop_path + movie.backdrop_path} 
                 alt={movie.title}
-                // width={1000}
-                // height={500}
                 layout='fill'
                 quality={100}
                 objectFit='cover'
@@ -30,13 +28,13 @@ export default function MovieDetails({movie, credits}) {
                     <p key={genre.id}>{genre.name}</p>
                 ))}
             </div>
-            {/* <p className={styles.movieDetail__description__rating}>{movie.vote_average.toFixed(1)}</p> */}
+            <p className={styles.movieDetail__description__rating}>{movie.vote_average.toFixed(1)}</p>
             <p className={styles.movieDetail__description__overview}>{movie.overview}</p>
             <div className={styles.movieDetail__description__casts}>
                 <h3 className={styles.movieDetail__description__casts__text}>casts</h3>
                 <Swiper
-                    grabCursor={true}
-                    spaceBetween={5}
+                    // grabCursor={true}
+                    // spaceBetween={5}
                     breakpoints={{
                         350: {
                             width: 350,
