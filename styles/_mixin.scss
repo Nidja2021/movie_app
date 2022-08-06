@@ -1,0 +1,26 @@
+@use './variables' as *;
+
+@mixin flex($direction: row, $justify_content: center, $align_items:center, $wrap: nowrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify_content;
+    align-items: $align_items;
+    flex-wrap: $wrap;
+}
+
+@mixin position($position: absolute, $top, $left, $right, $bottom) {
+    position: $position;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+}
+
+@mixin text($color: $white, $fontSize: 18px, $transform: uppercase, $fontWeight: 400, $leter-spacing: 1.2px) {
+    font-size: $fontSize;
+    color: $color;
+    text-transform: $transform;
+    font-weight: $fontWeight;
+    letter-spacing: $leter-spacing;
+    text-align: center;
+}

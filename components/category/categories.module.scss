@@ -1,0 +1,6 @@
+@use '../../styles/mixin' as *;
+
+.categories {
+    @include flex($direction: column);
+    gap: 15px 0;
+}
