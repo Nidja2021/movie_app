@@ -19,7 +19,7 @@ export default function MovieDetails({movie, credits}) {
                 // height={500}
                 layout='fill'
                 quality={100}
-                // objectFit='contain'
+                objectFit='cover'
                 className={styles.movieDetail__image__img}
             />
         </div>
