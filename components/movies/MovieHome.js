@@ -13,12 +13,13 @@ export default function Movie({ movie }) {
 
   return (
     <div onClick={handleMovieId} className={styles.movie}>
+
         <Image
-                src={BASE_URL + movie.poster_path}
-                alt={movie.title}
-                layout='fill'
-            />
-        
+                  src={BASE_URL + movie.poster_path}
+                  alt={movie.title}
+                  layout='fill'
+                  quality={100}
+              />
         <div className={styles.movie__description}>
           <p className={styles.movie__description__title}>{movie.title}</p>
         </div>
