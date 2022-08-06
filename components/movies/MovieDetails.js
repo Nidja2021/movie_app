@@ -75,7 +75,7 @@ export default function MovieDetails({movie, credits}) {
             </div>
 
             <Link href={`https://www.imdb.com/title/${movie.imdb_id}/`}>
-                <a>Go to IMDB</a>
+                <a target="_blank">Go to IMDB</a>
             </Link>
 
         </div>
