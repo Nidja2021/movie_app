@@ -1,15 +1,15 @@
-import Movie from "./Movie"
-
+import Movie from "./MovieHome"
+import Link from "next/link";
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import 'swiper/css';
-import styles from './movies.module.scss'
+import styles from './movieshome.module.scss'
+
 
 export default function Movies({movies, title}) {
   
   return (
     <div className={styles.movies}>
-        <h1>{title}</h1>
+        <h2 className={styles.movies__title}>{title}</h2>
         <div className={styles.movies__row}>
             <Swiper
               grabCursor={true}

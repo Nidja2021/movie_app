@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Movies from '../components/movies/Movies';
+import Movies from '../components/movies/MoviesHome';
 import axios from 'axios';
 
 

@@ -16,11 +16,12 @@
     bottom: $bottom;
 }
 
-@mixin text($color: $white, $fontSize: 18px, $transform: uppercase, $fontWeight: 400, $leter-spacing: 1.2px) {
+@mixin text($color: $white, $fontSize: 18px, $transform: uppercase, $fontWeight: 400, $leter-spacing: 1.2px, $decoration: none) {
     font-size: $fontSize;
     color: $color;
     text-transform: $transform;
     font-weight: $fontWeight;
     letter-spacing: $leter-spacing;
-    text-align: center;
+    // text-align: center;
+    text-decoration: $decoration;
 }

@@ -1,0 +1,16 @@
+@use '../../styles/mixin' as *;
+@use '../../styles/variables' as *;
+
+.navbar {
+    width: 100vw;
+    padding: 15px;
+    @include flex;
+    gap: 20px;
+    position: fixed;
+    background-color: $secondary;
+    z-index: 999;
+
+    &__links {
+        @include text($fontSize: 12px);
+    }
+}

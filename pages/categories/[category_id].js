@@ -1,15 +1,15 @@
 import axios from "axios";
+import MoviesList from "../../components/movies/MoviesList";
+import styles from '../../components/movies/movieslist.module.scss'
 
 export default function Category({ data }) {
-  console.log(data);
+//   console.log(data);
   return (
-    <div>Category</div>
+    <MoviesList movies={data} title="Popular Movies"/>
   )
 }
 
 export async function getStaticPaths() {
-  
-
   const {data} = await axios.get(process.env.BASE_URL + 'genre/movie/list', {
       params: {
           api_key: process.env.API_KEY
@@ -29,7 +29,6 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-
   const id = context.params.category_id
 
   const url = 'https://api.themoviedb.org/3/discover/movie'

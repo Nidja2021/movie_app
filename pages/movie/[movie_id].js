@@ -1,21 +1,12 @@
 import axios from 'axios'
+import MovieDetails from '../../components/movies/MovieDetails';
 
-export default function MovieDetail({data}) {
-    console.log(data);
-    const backdrop_path = 'https://image.tmdb.org/t/p/w1280'
+export default function MovieDetail({movie, credits}) {
+    console.log(movie);
+    console.log(credits);
+    
   return (
-    <>
-        <img 
-        src={backdrop_path + data.poster_path} 
-        alt={data.title}
-        width={500}
-        height={400}
-        />
-        <h2>{data.title}</h2>
-        {/* {data.genres.map(genre => (
-            <h4>{genre.name}</h4>
-        ))} */}
-    </>
+    <MovieDetails movie={movie} credits={credits} />
   )
 }
 
@@ -41,20 +32,23 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
 
     const id = context.params.movie_id
-    
-    // const url = 'https://api.themoviedb.org/3/find/' + id
-    const url = 'https://api.themoviedb.org/3/movie/' + id
 
-    const {data} = await axios.get(url, {
-        params: {
-            api_key: process.env.API_KEY,
-            external_source: 'imdb_id'
-        }
-    })
+    const API_KEY = process.env.API_KEY
+
+    const [movieRes, creditsRes] = await Promise.all([
+        fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`),
+        fetch(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=${API_KEY}`)
+    ])
+
+    const [movie, credits] = await Promise.all([
+        movieRes.json(),
+        creditsRes.json()
+    ])
 
     return {
         props: {
-            data
+            movie,
+            credits: credits.cast
         }
     }
 }

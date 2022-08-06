@@ -3,4 +3,9 @@
 .categories {
     @include flex($direction: column);
     gap: 15px 0;
+
+    &__title {
+        @include text;
+        
+    }
 }

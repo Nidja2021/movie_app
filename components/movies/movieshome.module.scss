@@ -1,0 +1,11 @@
+@use '../../styles/mixin' as *;
+
+.movies {
+
+    margin-top: 30px;
+
+    &__title {
+        @include text($fontSize: 17px);
+        margin-bottom: 10px;
+    }
+}

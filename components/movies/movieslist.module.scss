@@ -1,0 +1,11 @@
+@use '../../styles/mixin' as *;
+
+.movieslist {
+    width: 100%;
+    @include flex($wrap: wrap);
+    gap: 20px;
+
+    &__movie {
+        width: calc(100% / 3);
+    }
+}

@@ -1,0 +1,68 @@
+@use '../../styles/mixin' as *;
+
+.movieDetail {
+    width: 100%;
+    // position: relative;
+
+    &__image {
+        width: 100%;
+        height: auto;
+    }
+
+    &__description {
+        margin-top: 20px;
+        @include flex($direction: column);
+        gap: 15px 0;
+
+        h1 {
+            @include text($fontSize: 25px);
+            text-align: center;
+        }
+
+        &__genres {
+            @include flex($wrap: wrap);
+            gap: 15px 10px;
+            @include text($fontSize: 10px);
+
+            p {
+                padding: 8px 10px;
+                border: 1px solid white;
+            }
+        }
+
+        &__rating {
+            @include text($fontSize: 22px);
+        }
+
+        &__overview {
+            @include text($transform: none);
+            text-align: justify;
+            line-height: 1.5;
+        }
+
+        &__casts {
+            width: 100%;
+            height: auto;
+
+            &__cast {
+                @include flex($direction: column);
+                gap: 10px 0;
+                &__img {
+                    border-radius: 50%;
+                }
+                h6 {
+                    @include text($fontSize: 10px);
+                    text-align: center;
+                }
+            }  
+        }
+
+        a {
+            text-decoration: none;
+            // text-transform: uppercase;
+            color: black;
+            padding: 8px 15px;
+            background-color: white;
+        }
+    }
+}
