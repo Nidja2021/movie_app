@@ -1,5 +1,7 @@
 @use '../../styles/mixin' as *;
 @use '../../styles/variables' as *;
+@use '../../styles/breakpoints' as *;
+
 
 .navbar {
     width: 100vw;
@@ -10,7 +12,13 @@
     background-color: $secondary;
     z-index: 999;
 
+    
+
     &__links {
         @include text($fontSize: 12px);
+
+        @include md {
+            @include text($fontSize: 20px);
+        }
     }
 }
