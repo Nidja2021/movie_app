@@ -6,31 +6,21 @@ import styles from './moviehome.module.scss'
 export default function Movie({ movie }) {
     const router = useRouter()
     const BASE_URL = 'https://image.tmdb.org/t/p/w1280'
-    
-    const movie_data = {
-        id: movie.id,
-        title: movie.title,
-        image: BASE_URL + movie.poster_path,
-        rating: movie.vote_average
-    }
 
     const handleMovieId = () => {
-      router.push(`/movie/${movie_data.id}`)
+      router.push(`/movie/${movie.id}`)
     }
 
   return (
     <div onClick={handleMovieId} className={styles.movie}>
         <Image
-                src={movie_data.image}
-                alt={`${movie_data.title}`}
-                // width={250}
-                // height={400}
+                src={BASE_URL + movie.poster_path}
+                alt={movie.title}
                 layout='fill'
-                // objectFit='cover'
             />
         
         <div className={styles.movie__description}>
-          <p className={styles.movie__description__title}>{movie_data.title}</p>
+          <p className={styles.movie__description__title}>{movie.title}</p>
         </div>
     </div>
   )

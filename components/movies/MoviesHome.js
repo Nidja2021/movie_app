@@ -1,4 +1,4 @@
-import Movie from "./MovieHome"
+import MovieHome from "./MovieHome"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import styles from './movieshome.module.scss'
@@ -25,7 +25,7 @@ export default function Movies({movies, title}) {
             >
               {movies.map(movie => (
                 <SwiperSlide key={movie.id}>
-                  <Movie movie={movie}/>
+                  <MovieHome movie={movie}/>
                 </SwiperSlide> 
               ))}
             </Swiper>

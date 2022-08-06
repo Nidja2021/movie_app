@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Movies from '../components/movies/MoviesHome';
+import MoviesHome from '../components/movies/MoviesHome';
 
 export default function Home({
   popularMovies, 
@@ -12,8 +12,6 @@ export default function Home({
   romanceMovies
 }) {
 
-  console.log(popularMovies);
-
   return (
     <div>
       <Head>
@@ -22,14 +20,14 @@ export default function Home({
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Movies movies={popularMovies} title="Popular Movies" />
-      <Movies movies={topRatedMovies} title="Top Rated Movies"/>
-      <Movies movies={actionMovies} title="Action"/>
-      <Movies movies={animationMovies} title="Animation"/>
-      <Movies movies={comedyMovies} title="Comedy"/>
-      <Movies movies={familyMovies} title="Family"/>
-      <Movies movies={fantasyMovies} title="Fantasy"/>
-      <Movies movies={romanceMovies} title="Romance"/>
+      <MoviesHome movies={popularMovies} title="Popular Movies" />
+      <MoviesHome movies={topRatedMovies} title="Top Rated Movies"/>
+      <MoviesHome movies={actionMovies} title="Action"/>
+      <MoviesHome movies={animationMovies} title="Animation"/>
+      <MoviesHome movies={comedyMovies} title="Comedy"/>
+      <MoviesHome movies={familyMovies} title="Family"/>
+      <MoviesHome movies={fantasyMovies} title="Fantasy"/>
+      <MoviesHome movies={romanceMovies} title="Romance"/>
     </div>
   )
 }

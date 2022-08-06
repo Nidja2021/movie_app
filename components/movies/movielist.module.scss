@@ -1,9 +1,22 @@
 @use '../../styles/mixin' as *;
+@use '../../styles/breakpoints' as *;
 
 .movie {
     width: calc(100% / 2.5);
     height: 200px;
     position: relative;
+
+    @include md {
+        width: calc(100% / 4);
+    }
+
+    @include lg {
+        width: calc(100% / 5);
+    }
+
+    @include xl {
+        width: calc(100% / 8);
+    }
 
     &__description {
         width: 100%;

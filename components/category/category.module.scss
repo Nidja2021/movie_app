@@ -1,4 +1,5 @@
 @use '../../styles/mixin' as *;
+@use '../../styles/breakpoints' as *;
 
 .category {
     width: 100%;
@@ -6,4 +7,8 @@
     @include flex;
     background-color: black;
     color: white;
+
+    @include md {
+        width: calc(100% / 3);
+    }
 }
