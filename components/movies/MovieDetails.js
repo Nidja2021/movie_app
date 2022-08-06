@@ -13,7 +13,7 @@ export default function MovieDetails({movie, credits}) {
     <div className={styles.movieDetail}>
         <div className={styles.movieDetail__image}>
             <Image 
-                src={backdrop_path + movie.poster_path} 
+                src={backdrop_path + movie.backdrop_path} 
                 alt={movie.title}
                 // width={1000}
                 // height={500}
@@ -33,6 +33,7 @@ export default function MovieDetails({movie, credits}) {
             {/* <p className={styles.movieDetail__description__rating}>{movie.vote_average.toFixed(1)}</p> */}
             <p className={styles.movieDetail__description__overview}>{movie.overview}</p>
             <div className={styles.movieDetail__description__casts}>
+                <h3 className={styles.movieDetail__description__casts__text}>casts</h3>
                 <Swiper
                     grabCursor={true}
                     spaceBetween={5}
