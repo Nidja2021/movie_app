@@ -48,6 +48,7 @@
                 @include flex($direction: column);
                 gap: 10px 0;
                 &__img {
+                    border: 1px solid white;
                     border-radius: 50%;
                 }
                 h6 {

@@ -41,6 +41,7 @@ export default function MovieDetails({movie, credits}) {
                             <div className={styles.movieDetail__description__casts__cast}>
                                 <Image 
                                     src={CAST_BASE_URL + cast.profile_path}
+                                    alt={cast.name}
                                     width={100}
                                     height={100}
                                     quality={100}

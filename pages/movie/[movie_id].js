@@ -2,9 +2,6 @@ import axios from 'axios'
 import MovieDetails from '../../components/movies/MovieDetails';
 
 export default function MovieDetail({movie, credits}) {
-    console.log(movie);
-    console.log(credits);
-    
   return (
     <MovieDetails movie={movie} credits={credits} />
   )
