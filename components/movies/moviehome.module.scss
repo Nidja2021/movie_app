@@ -20,8 +20,12 @@
         background-color: rgba($color: #000000, $alpha: .8);
 
         &__title {
-            @include text($fontSize: 12px, $fontWeight: 700);
+            @include text($fontSize: 9px, $fontWeight: 700);
             text-align: center;
+
+            @include md {
+                @include text($fontSize: 11px, $fontWeight: 700);
+            }
         }
     }
 }
