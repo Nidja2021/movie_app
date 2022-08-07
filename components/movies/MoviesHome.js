@@ -13,9 +13,13 @@ export default function Movies({movies, title}) {
               grabCursor={true}
               spaceBetween={10}
               breakpoints={{
-                  365: {
+                  250: {
                     width: 365,
                     slidesPerView: 2
+                  },
+                  420: {
+                    width: 420,
+                    slidesPerView: 3
                   },
                   720: {
                     width: 720,

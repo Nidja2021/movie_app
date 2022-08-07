@@ -1,4 +1,5 @@
 @use '../../styles/mixin' as *;
+@use '../../styles/breakpoints' as *;
 
 .categories {
     @include flex($direction: column);
@@ -6,6 +7,14 @@
 
     &__title {
         @include text;
-        
+
+        @include md {
+            @include text($fontSize: 25px, $fontWeight: 700);
+        }
+    }
+
+    &__category {
+        @include flex($wrap: wrap);
+        gap: 15px;
     }
 }
