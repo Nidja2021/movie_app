@@ -1,5 +1,6 @@
 import axios from 'axios'
 import MovieDetails from '../../components/movies/MovieDetails';
+import {API_KEY} from '../../utils/util'
 
 function MovieDetail({movie, credits}) {
 console.log('movie', movie);
@@ -14,8 +15,6 @@ export default MovieDetail
 
 export async function getServerSideProps(context) {
     const { movie_id } = context.query;
-    
-    const API_KEY = process.env.API_KEY
 
     const [movieRes, creditsRes] = await Promise.all([
         fetch(`https://api.themoviedb.org/3/movie/${movie_id}?api_key=${API_KEY}`),

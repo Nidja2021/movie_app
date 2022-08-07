@@ -1,0 +1,15 @@
+@use '../../styles/mixin' as *;
+
+.search {
+    @include flex($direction: column);
+    gap: 30px 0;
+
+    &__text {
+        @include text($fontSize: 20px);
+    }
+
+    &__input {
+        width: 100%;
+        padding: 10px;
+    }
+}
