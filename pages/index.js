@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import MoviesHome from '../components/movies/MoviesHome';
+import { API_KEY } from '../utils/util';
 
 export default function Home({
   popularMovies, 
@@ -48,28 +49,28 @@ export async function getServerSideProps(context) {
     fantasyMoviesRes,
     romanceMoviesRes] = await Promise.all([
     fetch(
-      `${base_url}movie/popular?api_key=${process.env.API_KEY}&language=en-US&page=1`
+      `${base_url}movie/popular?api_key=${API_KEY}&language=en-US&page=1`
     ),
     fetch(
-      `${base_url}movie/top_rated?api_key=${process.env.API_KEY}&language=en-US&page=1`
+      `${base_url}movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`
     ),
     fetch(
-      `${base_url}discover/movie?api_key=${process.env.API_KEY}&sort_by=popularity.desc&page=1&with_genres=28&with_watch_monetization_types=flatrate`
+      `${base_url}discover/movie?api_key=${API_KEY}&sort_by=popularity.desc&page=1&with_genres=28&with_watch_monetization_types=flatrate`
     ),
     fetch(
-      `${base_url}discover/movie?api_key=${process.env.API_KEY}&sort_by=popularity.desc&page=1&with_genres=16&with_watch_monetization_types=flatrate`
+      `${base_url}discover/movie?api_key=${API_KEY}&sort_by=popularity.desc&page=1&with_genres=16&with_watch_monetization_types=flatrate`
     ),
     fetch(
-      `${base_url}discover/movie?api_key=${process.env.API_KEY}&sort_by=popularity.desc&page=1&with_genres=35&with_watch_monetization_types=flatrate`
+      `${base_url}discover/movie?api_key=${API_KEY}&sort_by=popularity.desc&page=1&with_genres=35&with_watch_monetization_types=flatrate`
     ),
     fetch(
-      `${base_url}discover/movie?api_key=${process.env.API_KEY}&sort_by=popularity.desc&page=1&with_genres=10751&with_watch_monetization_types=flatrate`
+      `${base_url}discover/movie?api_key=${API_KEY}&sort_by=popularity.desc&page=1&with_genres=10751&with_watch_monetization_types=flatrate`
     ),
     fetch(
-      `${base_url}discover/movie?api_key=${process.env.API_KEY}&sort_by=popularity.desc&page=1&with_genres=14&with_watch_monetization_types=flatrate`
+      `${base_url}discover/movie?api_key=${API_KEY}&sort_by=popularity.desc&page=1&with_genres=14&with_watch_monetization_types=flatrate`
     ),
     fetch(
-      `${base_url}discover/movie?api_key=${process.env.API_KEY}&sort_by=popularity.desc&page=1&with_genres=10749&with_watch_monetization_types=flatrate`
+      `${base_url}discover/movie?api_key=${API_KEY}&sort_by=popularity.desc&page=1&with_genres=10749&with_watch_monetization_types=flatrate`
     ),
   ])
 

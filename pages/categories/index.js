@@ -1,5 +1,6 @@
 import axios from 'axios'
 import Categories from '../../components/category/Categories';
+import { API_KEY } from '../../utils/util';
 
 export default function CategoriesData({data}) {
     console.log(data);
@@ -16,7 +17,7 @@ export async function getStaticProps(context) {
     
     const {data} = await axios.get(BASE_URL + 'genre/movie/list', {
         params: {
-            api_key: process.env.API_KEY
+            api_key: API_KEY
         }
     })
 
