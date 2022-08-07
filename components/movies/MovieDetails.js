@@ -35,6 +35,8 @@ export default function MovieDetails({movie, credits}) {
                 <Swiper
                     // grabCursor={true}
                     // spaceBetween={5}
+                    className={styles.movieDetail__description__casts__swiper}
+                    
                     breakpoints={{
                         350: {
                             width: 350,

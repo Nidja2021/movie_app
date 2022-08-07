@@ -44,6 +44,12 @@
         &__casts {
             width: 100%;
             height: auto;
+            margin: 0 auto;
+
+            &__swiper {
+                width: 80%;
+                margin: 0 auto;
+            }
 
             &__text {
                 @include text;
@@ -66,9 +72,9 @@
 
         a {
             text-decoration: none;
-            // text-transform: uppercase;
+            margin-top: 30px;
             color: black;
-            padding: 8px 15px;
+            padding: 10px 25px;
             background-color: white;
         }
     }
