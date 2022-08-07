@@ -5,7 +5,9 @@ import styles from './movielist.module.scss'
 
 export default function MovieList({ movie }) {
     const router = useRouter()
+    
     const BASE_URL = 'https://image.tmdb.org/t/p/w1280'
+    const image_path = movie.poster_path ? BASE_URL + movie.poster_path : '/assets/error_pic.png'
 
     const handleMovieId = () => {
       router.push(`/movie/${movie.id}`)
@@ -13,14 +15,12 @@ export default function MovieList({ movie }) {
 
   return (
     <div onClick={handleMovieId} className={styles.movie}>
-        <Image
-                src={BASE_URL + movie.poster_path}
-                alt={`${movie.title}`}
-                // width={250}
-                // height={400}
-                layout='fill'
-                // objectFit='cover'
-            />
+    
+      <Image
+          src={image_path}
+          alt={movie.title}
+          layout='fill'
+      />
         
         <div className={styles.movie__description}>
           <p className={styles.movie__description__title}>{movie.title}</p>

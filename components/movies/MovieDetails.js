@@ -8,6 +8,7 @@ export default function MovieDetails({movie, credits}) {
     const backdrop_path = 'https://image.tmdb.org/t/p/w1280'
     const CAST_BASE_URL = 'https://image.tmdb.org/t/p/w300_and_h450_bestv2/'
     const credit_slice = credits?.slice(0, 10)
+    
   return (
     
     <div className={styles.movieDetail}>
@@ -60,7 +61,7 @@ export default function MovieDetails({movie, credits}) {
                         <SwiperSlide key={cast.id}>
                             <div className={styles.movieDetail__description__casts__cast}>
                                 <Image 
-                                    src={cast.profile_path ? CAST_BASE_URL + cast.profile_path : CAST_BASE_URL + ''}
+                                    src={cast.profile_path ? CAST_BASE_URL + cast.profile_path : '/assets/error_pic.png'}
                                     alt={cast.name}
                                     width={100}
                                     height={100}
