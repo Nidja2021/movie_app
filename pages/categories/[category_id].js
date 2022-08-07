@@ -1,6 +1,6 @@
 import axios from "axios";
 import MoviesList from "../../components/movies/MoviesList";
-import styles from '../../components/movies/movieslist.module.scss'
+import { API_KEY } from "../../utils/util";
 
 export default function Category({ data }) {
 //   console.log(data);
@@ -56,7 +56,7 @@ export async function getServerSideProps(context) {
 
     const {data} = await axios.get(url, { 
       params: {
-          api_key: process.env.API_KEY,
+          api_key: API_KEY,
           sort_by: 'popularity.desc',
           page: 1,
           with_genres: category_id

@@ -11,9 +11,8 @@ export default function CategoriesData({data}) {
   )
 }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
     const BASE_URL = process.env.BASE_URL
-    // const url = "
     
     const {data} = await axios.get(BASE_URL + 'genre/movie/list', {
         params: {
