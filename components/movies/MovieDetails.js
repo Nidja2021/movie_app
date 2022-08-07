@@ -60,7 +60,7 @@ export default function MovieDetails({movie, credits}) {
                         <SwiperSlide key={cast.id}>
                             <div className={styles.movieDetail__description__casts__cast}>
                                 <Image 
-                                    src={CAST_BASE_URL + cast.profile_path}
+                                    src={cast.profile_path ? CAST_BASE_URL + cast.profile_path : CAST_BASE_URL + ''}
                                     alt={cast.name}
                                     width={100}
                                     height={100}
