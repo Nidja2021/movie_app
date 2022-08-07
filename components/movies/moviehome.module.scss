@@ -2,9 +2,9 @@
 @use '../../styles/breakpoints' as *;
 
 .movie {
+    position: relative;
     width: 100%;
     height: 200px;
-    position: relative;
 
     @include md {
         height: 250px;

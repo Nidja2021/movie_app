@@ -17,6 +17,8 @@ export default function Movie({ movie }) {
         <Image
                   src={BASE_URL + movie.poster_path}
                   alt={movie.title}
+                  // width={250}
+                  // height={250}
                   layout='fill'
                   quality={100}
               />
