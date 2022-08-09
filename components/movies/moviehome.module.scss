@@ -2,30 +2,71 @@
 @use '../../styles/breakpoints' as *;
 
 .movie {
-    position: relative;
-    width: 100%;
-    height: 200px;
+    // position: relative;
+    width: 180px;
+    height: auto;
+    // padding-bottom: 30px;
+    // border: 1px solid white;
+        border-radius: 10px;
+    @include flex($direction: column, $justifyContent: flex-start, $alignItems: center);
+    transition: transform .3s ease-in-out;
+
+    &:hover {
+        // transform: scale(1.1);
+    }
 
     @include md {
-        height: 250px;
+        width: 200px;
+        height: 350px;
     }
 
-    &__description {
+    &__image {
+        position: relative;
         width: 100%;
-        height: 22%;
-        @include flex;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        background-color: rgba($color: #000000, $alpha: .8);
+        height: 250px;
+        border-radius: 10px;
+        // border: 1px solid white;
 
-        &__title {
-            @include text($fontSize: 9px, $fontWeight: 700);
-            text-align: center;
+        &:hover {
+            background-color: rgba($color: #000000, $alpha: .8);
+        }
 
-            @include md {
-                @include text($fontSize: 11px, $fontWeight: 700);
-            }
+        &__img {
+            height: 100%;
+            border-radius: 10px;
         }
     }
+
+    &__title {
+        // position: absolute;
+        // bottom: -30px;
+        // left: 0;
+        @include flex($wrap: wrap);
+        @include text($fontSize: 10px, $fontWeight: 700);
+        text-align: center;
+        margin-top: 10px;
+
+        @include md {
+            @include text($fontSize: 12px, $fontWeight: 700);
+        }
+    }
+
+    // &__description {
+    //     width: 100%;
+    //     height: 22%;
+    //     @include flex;
+    //     position: absolute;
+    //     bottom: -10px;
+    //     left: 0;
+        // background-color: rgba($color: #000000, $alpha: .8);
+
+        // &__title {
+        //     @include text($fontSize: 9px, $fontWeight: 700);
+        //     text-align: center;
+
+        //     @include md {
+        //         @include text($fontSize: 11px, $fontWeight: 700);
+        //     }
+        // }
+    // }
 }

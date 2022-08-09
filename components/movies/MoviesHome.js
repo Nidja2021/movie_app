@@ -8,22 +8,26 @@ export default function Movies({movies, title}) {
   
   return (
     <div className={styles.movies}>
-        <h2 className={styles.movies__title}>{title}</h2>
+      <div className="container">
+      <h2 className={styles.movies__title}>{title}</h2>
             <Swiper
               grabCursor={true}
-              spaceBetween={10}
+              // spaceBetween={50}
               breakpoints={{
                   270: {
                     width: 270,
-                    slidesPerView: 2
+                    slidesPerView: 2,
+                    spaceBetween: 120
                   },
                   420: {
                     width: 420,
-                    slidesPerView: 3
+                    slidesPerView: 3,
+                    spaceBetween: 120
                   },
                   720: {
                     width: 720,
-                    slidesPerView: 5
+                    slidesPerView: 4,
+                    spaceBetween: 150
                   }
               }}
             >
@@ -33,6 +37,8 @@ export default function Movies({movies, title}) {
                 </SwiperSlide> 
               ))}
             </Swiper>
+      </div>
+        
     </div>
   )
 }

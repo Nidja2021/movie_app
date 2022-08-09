@@ -1,4 +1,5 @@
 @use './variables' as *;
+@use './breakpoints' as *;
 
 *{
   margin: 0;
@@ -8,4 +9,15 @@
 
 body {
   background-color: $primary;
+}
+
+
+.container {
+  width: 95%;
+  margin: 50px auto;
+
+  @include lg {
+    width: 85%;
+  }
+
 }

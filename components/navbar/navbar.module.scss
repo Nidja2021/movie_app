@@ -9,10 +9,14 @@
     @include flex;
     gap: 20px;
     position: fixed;
+    bottom: 0;
     background-color: $secondary;
     z-index: 999;
 
-    
+    @include md {
+        height: 6vh;
+        top: 0;
+    }
 
     &__links {
         @include text($fontSize: 12px);

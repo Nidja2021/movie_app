@@ -4,14 +4,4 @@
     width: 100vw;
     height: auto;
 
-    &__main {
-        width: 95%;
-        margin: 0 auto;
-        padding: 70px 0;
-
-        @include md {
-            width: 85%;
-        }
-    }
-
 }

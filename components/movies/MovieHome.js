@@ -13,18 +13,20 @@ export default function Movie({ movie }) {
 
   return (
     <div onClick={handleMovieId} className={styles.movie}>
-
-        <Image
+      <div className={styles.movie__image}>
+          <Image
                   src={BASE_URL + movie.poster_path}
                   alt={movie.title}
-                  // width={250}
-                  // height={250}
                   layout='fill'
                   quality={100}
+                  className={styles.movie__image__img}
               />
-        <div className={styles.movie__description}>
+      </div>
+        
+      <h3 className={styles.movie__title}>{movie.title}</h3>
+        {/* <div className={styles.movie__description}>
           <p className={styles.movie__description__title}>{movie.title}</p>
-        </div>
+        </div> */}
     </div>
   )
 }
