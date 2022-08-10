@@ -3,8 +3,8 @@ import MovieDetails from '../../components/movies/MovieDetails';
 import {API_KEY} from '../../utils/util'
 
 function MovieDetail({movie, credits}) {
-console.log('movie', movie);
-console.log('credits', credits);
+// console.log('movie', movie);
+// console.log('credits', credits);
   return (
     // <p>hello</p>
     <MovieDetails movie={movie} credits={credits} />

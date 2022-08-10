@@ -3,7 +3,7 @@ import Categories from '../../components/category/Categories';
 import { API_KEY } from '../../utils/util';
 
 export default function CategoriesData({data}) {
-    console.log(data);
+    // console.log(data);
   return (
     <>
         <Categories data={data}/>

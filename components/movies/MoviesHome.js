@@ -11,7 +11,7 @@ export default function Movies({movies, title}) {
       <div className="container">
       <h2 className={styles.movies__title}>{title}</h2>
             <Swiper
-              grabCursor={true}
+              // grabCursor={true}
               // spaceBetween={50}
               breakpoints={{
                   270: {

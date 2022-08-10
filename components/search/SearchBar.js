@@ -10,8 +10,6 @@ export default function SearchBar() {
     const [movies, setMovies] = useState([])
     const URL = `https://api.themoviedb.org/3/search/movie`
  
-   
-
     const getMovies = async () => {
         const {data} = await axios.get(URL, {
             params: {

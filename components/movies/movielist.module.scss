@@ -5,6 +5,7 @@
     width: calc(100% / 2.5);
     height: 200px;
     position: relative;
+    cursor: pointer;
 
     @include md {
         width: calc(100% / 4);
