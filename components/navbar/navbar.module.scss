@@ -15,15 +15,31 @@
 
     @include md {
         justify-content: space-evenly;
-        height: 8vh;
+        height: 7vh;
         top: 0;
     }
 
     &__links {
         @include text($fontSize: 12px);
+        position: relative;
 
         @include md {
-            @include text($fontSize: 20px);
+            @include text($fontSize: 18px);
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -3px;
+                left: 0;
+                width: 0%;
+                height: 1px;
+                background-color: white;
+                transition: all .3s ease-in-out;
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
         }
     }
 }
