@@ -32,7 +32,7 @@ export default function SearchBar() {
     }
 
   return (
-    <div className={styles.search}>
+    <div className={`${styles.search} container`}>
         <h1 className={styles.search__text}>Search Movie</h1>
         <input onChange={handleMovie} ref={inputRef} type="text" placeholder='Search movie...' className={styles.search__input}/>
         <MoviesList movies={movies}/>
