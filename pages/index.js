@@ -22,6 +22,7 @@ export default function Home({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Carousel movies={popularMovies} />
+      <div className='container'>
       <MoviesHome movies={popularMovies} title="Popular Movies" />
       <MoviesHome movies={topRatedMovies} title="Top Rated Movies"/>
       <MoviesHome movies={actionMovies} title="Action"/>
@@ -30,6 +31,8 @@ export default function Home({
       <MoviesHome movies={familyMovies} title="Family"/>
       <MoviesHome movies={fantasyMovies} title="Fantasy"/>
       <MoviesHome movies={romanceMovies} title="Romance"/>
+      </div>
+      
     </div>
   )
 }

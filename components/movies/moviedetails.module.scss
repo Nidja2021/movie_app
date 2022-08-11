@@ -1,81 +1,147 @@
 @use '../../styles/mixin' as *;
+@use '../../styles/breakpoints' as *;
 
 .movieDetail {
     width: 100%;
+
+
     // position: relative;
 
     &__image {
         position: relative;
         width: 100%;
         height: 500px;
+
+        &__box_shadow {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgb(189, 189, 189), #000);
+            opacity: .65;
+        }
     }
 
-    &__description {
-        margin-top: 20px;
-        @include flex($direction: column);
-        gap: 15px 0;
+    &__info {
+        @include flex($wrap: wrap);
+        gap: 50px;
 
-        h1 {
-            @include text($fontSize: 25px);
-            text-align: center;
+        &__image {
+            display: none;
+            position: relative;
+            // width: auto;
+            // height: auto;
+
+            @include md {
+                display: block;
+                flex: 1;
+                width: 30%;
+                height: 500px;
+            }
+
+            // @include lg {
+            //     width: 30%;
+            // }
         }
 
-        &__genres {
-            @include flex($wrap: wrap);
-            gap: 15px 10px;
-            @include text($fontSize: 10px);
+        &__description {
+            flex: 2;
+            width: 70%;
+            @include flex($direction: column);
+            gap: 15px 0;
 
-            p {
-                padding: 8px 10px;
+            // @include md {
+            //     width: 60%;
+            // }
+
+            // @include lg {
+            //     width: 65%;
+            // }
+    
+            h1 {
+                @include text($fontSize: 25px);
+                text-align: center;
+            }
+    
+            &__genres {
+                @include flex($wrap: wrap);
+                gap: 15px 10px;
+                @include text($fontSize: 10px);
+    
+                p {
+                    padding: 8px 10px;
+                    border: 1px solid white;
+                    border-radius: 10px;
+                }
+            }
+    
+            &__rating {
+                @include text($fontSize: 22px);
+                padding: 15px;
                 border: 1px solid white;
+                border-radius: 50%;
+                // background-color: white;
+                // color: black;
+            }
+    
+            &__overview {
+                @include text($transform: none);
+                text-align: justify;
+                line-height: 1.5;
+            }
+    
+            &__casts {
+                width: 100%;
+    
+                &__text {
+                    @include text;
+                    margin-bottom: 20px;
+                }
+    
+                &__cast {
+                    @include flex($direction: column);
+                    gap: 10px 0;
+                    &__img {
+                        border: 1px solid white;
+                        border-radius: 50%;
+                    }
+                    h6 {
+                        @include text($fontSize: 10px);
+                        text-align: center;
+                    }
+                }  
+            }
+    
+            a {
+                text-decoration: none;
+                margin-top: 30px;
+                color: black;
+                padding: 10px 25px;
+                background-color: white;
             }
         }
 
-        &__rating {
-            @include text($fontSize: 22px);
-        }
-
-        &__overview {
-            @include text($transform: none);
-            text-align: justify;
-            line-height: 1.5;
-        }
-
-        &__casts {
+        &__videos {
+            @include flex($direction: column);
+            gap: 30px 0;
             width: 100%;
-            height: auto;
-            margin: 0 auto;
-
-            &__swiper {
-                width: 80%;
-                margin: 0 auto;
-            }
 
             &__text {
                 @include text;
-                margin-bottom: 20px;
+                align-self: flex-start;
             }
 
-            &__cast {
-                @include flex($direction: column);
-                gap: 10px 0;
-                &__img {
-                    border: 1px solid white;
-                    border-radius: 50%;
-                }
-                h6 {
-                    @include text($fontSize: 10px);
-                    text-align: center;
-                }
-            }  
-        }
+            &__video {
+                width: 100%;
+                height: 300px;
+                border: none;
 
-        a {
-            text-decoration: none;
-            margin-top: 30px;
-            color: black;
-            padding: 10px 25px;
-            background-color: white;
+                @include md {
+                    height: 500px;
+                }
+            }
         }
     }
+
+    
 }

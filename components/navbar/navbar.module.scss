@@ -5,8 +5,8 @@
 
 .navbar {
     width: 100vw;
-    padding: 15px;
-    @include flex;
+    padding: 18px;
+    @include flex($justifyContent: space-between);
     gap: 20px;
     position: fixed;
     bottom: 0;
@@ -14,7 +14,8 @@
     z-index: 999;
 
     @include md {
-        height: 6vh;
+        justify-content: space-evenly;
+        height: 8vh;
         top: 0;
     }
 

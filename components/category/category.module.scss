@@ -5,7 +5,7 @@
     width: 100%;
     height: 100px;
     @include flex($wrap: wrap);
-    background-color: black;
+    background-color: rgb(39, 39, 39);
     @include text;
     color: white;
     text-align: center;

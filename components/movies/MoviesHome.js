@@ -8,7 +8,6 @@ export default function Movies({movies, title}) {
   
   return (
     <div className={styles.movies}>
-      <div className="container">
       <h2 className={styles.movies__title}>{title}</h2>
             <Swiper
               // grabCursor={true}
@@ -17,12 +16,12 @@ export default function Movies({movies, title}) {
                   270: {
                     width: 270,
                     slidesPerView: 2,
-                    spaceBetween: 120
+                    spaceBetween: 50
                   },
                   420: {
                     width: 420,
                     slidesPerView: 3,
-                    spaceBetween: 120
+                    spaceBetween: 100
                   },
                   720: {
                     width: 720,
@@ -37,7 +36,6 @@ export default function Movies({movies, title}) {
                 </SwiperSlide> 
               ))}
             </Swiper>
-      </div>
         
     </div>
   )

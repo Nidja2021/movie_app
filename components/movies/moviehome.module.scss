@@ -2,8 +2,9 @@
 @use '../../styles/breakpoints' as *;
 
 .movie {
-    width: 180px;
-    height: auto;
+    width: 150px;
+    height: 180px;
+    // border: 1px solid white;
     border-radius: 10px;
     @include flex($direction: column, $justifyContent: flex-start, $alignItems: center);
     transition: transform .3s ease-in-out;
@@ -11,10 +12,6 @@
 
     &:hover {
         transform: scale(1.1);
-
-        &__title {
-            color: red;
-        }
     }
 
     @include md {

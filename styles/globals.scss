@@ -14,10 +14,10 @@ body {
 
 .container {
   width: 95%;
-  margin: 50px auto;
+  margin: 50px auto 70px;
 
   @include lg {
-    width: 85%;
+    width: 75%;
   }
 
 }
