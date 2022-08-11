@@ -16,17 +16,13 @@ export default function MovieList({ movie }) {
   return (
     <div onClick={handleMovieId} className={styles.movie}>
     <div className={styles.movie__image}>
-    <Image
-          src={image_path}
-          alt={movie.title}
-          layout='fill'
-      />
+      <Image
+            src={image_path}
+            alt={movie.title}
+            layout='fill'
+        />
     </div>
-    <p className={styles.movie__title}>{movie.title}</p>
-        
-        {/* <div className={styles.movie__description}>
-          <p className={styles.movie__description__title}>{movie.title}</p>
-        </div> */}
+      <p className={styles.movie__title}>{movie.title}</p>
     </div>
   )
 }
